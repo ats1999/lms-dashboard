@@ -1,0 +1,27 @@
+.eventImage{
+    max-width: 100%;
+}
+.eventType{
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #fec601;
+    border-radius: 50px;
+    padding: 10px;
+    display: inline;
+}
+.eventName{
+    font-weight: bold;
+    font-size: 20px;
+}
+.countDownTimer > p{
+    font-weight: bold;
+    color: gray;
+    margin: 1px;
+    font-size: 10px;
+}
+.countDownTimer > span{
+    font-weight: bold;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}

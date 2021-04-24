@@ -1,0 +1,7 @@
+.progressContainer > p{
+    display: inline;
+}
+.profileLinkText{
+    text-decoration: none;
+    font-weight: bold;
+}

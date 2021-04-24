@@ -1,0 +1,24 @@
+.eventName{
+    font-size: 15px;
+    font-weight: bold;
+    color: gray;
+}
+.eventType{
+    font-size: 20px;
+    font-weight: bold;
+}
+.dateTimeText{
+    color: #da0909e3;
+}
+.eventContainer{
+    padding: 10px;
+    background-color: #f6faff;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline;
+    border-radius: 10px;
+}
+.upcomeingEventContainer{
+    display: flex;
+    overflow: auto;
+}

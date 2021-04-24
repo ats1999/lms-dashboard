@@ -1,0 +1,48 @@
+[
+    {
+        "heading":"MERN Stack",
+        "icon":{
+            "src":"https://img.icons8.com/windows/32/000000/node-js.png",
+            "alt":"MERN stack development"
+        },
+        "price":5000
+    },{
+        "heading":"NodeJs Development",
+        "icon":{
+            "src":"https://img.icons8.com/color/48/000000/nodejs.png",
+            "alt":"NodeJs development"
+        },
+        "price":2000
+    },
+    {
+        "heading":"ReactJs Development",
+        "icon":{
+            "src":"https://img.icons8.com/plasticine/48/000000/react.png",
+            "alt":"ReactJs development"
+        },
+        "price":1000
+    },
+    {
+        "heading":"Java full stack",
+        "icon":{
+            "src":"https://img.icons8.com/nolan/64/java-coffee-cup-logo.png",
+            "alt":"Java full stack"
+        },
+        "price":200
+    },
+    {
+        "heading":"Java Spring",
+        "icon":{
+            "src":"https://img.icons8.com/android/24/000000/spring.png",
+            "alt":"Java Spring"
+        },
+        "price":500
+    },{
+        "heading":"Java Enterprise",
+        "icon":{
+            "src":"https://img.icons8.com/ios-filled/50/000000/java-eclipse.png",
+            "alt":"Java Enterprise"
+        },
+        "price":8000
+    }
+]
