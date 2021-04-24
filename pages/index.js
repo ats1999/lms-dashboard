@@ -18,14 +18,16 @@ const useStyles = makeStyles((theme)=>({
 export default function Index(){
     const classes = useStyles();
     return <Grid container spacing={4}>
-        <Typography 
-            variant="h3"
-            component="h1"
-            align="center"
-            color="primary"
-        >
-            LMS Dashboard
-        </Typography>
+        <Grid item xs={12}>
+            <Typography 
+                variant="h3"
+                component="h1"
+                align="center"
+                color="primary"
+            >
+                LMS Dashboard
+            </Typography>
+        </Grid>
         <Grid item sm={12} md={8}>
             <CurrentEvent
                 name="Live class"
@@ -35,7 +37,7 @@ export default function Index(){
                 eventDateTime={Date.now()+1500000}
             />
 
-            {/* <UpcomeingEvents/> */}
+            <UpcomeingEvents/>
         </Grid>
         <Grid item sm={12} md={4} className={classes.performanceContainer}>
             <Performance
