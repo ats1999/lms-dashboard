@@ -1,4 +1,5 @@
 import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
 import CurrentEvent from "@components/home/CurrentEvent";
 import Performance from "@components/home/Performance";
 import LiveUpdates from "@components/home/LiveUpdates";
@@ -16,17 +17,25 @@ const useStyles = makeStyles((theme)=>({
 
 export default function Index(){
     const classes = useStyles();
-    return <Grid container spacing={1}>
+    return <Grid container spacing={4}>
+        <Typography 
+            variant="h3"
+            component="h1"
+            align="center"
+            color="primary"
+        >
+            LMS Dashboard
+        </Typography>
         <Grid item sm={12} md={8}>
             <CurrentEvent
                 name="Live class"
-                type="Class"
+                type="Lab Session"
                 date="Fri, 24 Apr"
                 time="08:00 PM"
                 eventDateTime={Date.now()+1500000}
             />
 
-            <UpcomeingEvents/>
+            {/* <UpcomeingEvents/> */}
         </Grid>
         <Grid item sm={12} md={4} className={classes.performanceContainer}>
             <Performance
@@ -35,7 +44,6 @@ export default function Index(){
             />
 
             <hr/>
-
             <LiveUpdates/>
         </Grid>
     </Grid>

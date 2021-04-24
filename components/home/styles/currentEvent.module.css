@@ -1,12 +1,12 @@
 .eventImage{
-    max-width: 100%;
+    max-width: 200px;
 }
 .eventType{
     font-size: 25px;
     font-weight: bold;
     background-color: #fec601;
-    border-radius: 50px;
-    padding: 10px;
+    border-radius: 5px;
+    padding: 4px;
     display: inline;
 }
 .eventName{

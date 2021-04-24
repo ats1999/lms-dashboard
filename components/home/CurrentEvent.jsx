@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme)=>({
 
 function DefaultEvent(){
     const classes = useStyles();
-    return <Grid container spacing={4} className={classes.container}>
+    return <Grid container spacing={2} className={classes.container}>
         <Grid item xs={12} sm={4}>
             <img 
                 src="https://res.cloudinary.com/dun9j2psp/image/upload/v1619210380/lsm/home/undraw_No_data_re_kwbl_h5jyar.svg"
@@ -50,8 +50,8 @@ function DefaultEvent(){
 
 function Event({name,type,date,time,eventDateTime}){
     const classes = useStyles();
-    return <Grid container spacing={5} className={classes.container}>
-        <Grid item xs={12} sm={4}>
+    return <Grid container spacing={2} className={classes.container}>
+        <Grid item sm={5} xs={12}>
             <img 
                 src="https://res.cloudinary.com/dun9j2psp/image/upload/v1619212030/lsm/home/undraw_teaching_f1cm_e6zruf.svg"
                 alt={name}
@@ -59,7 +59,7 @@ function Event({name,type,date,time,eventDateTime}){
             />
         </Grid>
         
-        <Grid container item xs={12} sm={8}>
+        <Grid container item xs={12} sm={7}>
             <Grid item xs={12}>
                 <h5 className={style.eventType}>{name}</h5>
                 <p className={style.eventName}>{type}</p>

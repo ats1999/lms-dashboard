@@ -11,6 +11,11 @@ const useStyles = makeStyles((theme)=>({
     },
     infoText:{
         fontSize:"12px"
+    },
+    updateItem:{
+        borderLeft:"10px solid rgb(12 98 255 / 54%)",
+        marginTop:"10px",
+        borderLeftWidth:"thin"
     }
 }))
 function getDuration(time){
@@ -25,7 +30,7 @@ function getDuration(time){
 
 function Update({heading,info,time}){
     const classes = useStyles();
-    return <Grid item xs={12}>
+    return <Grid item xs={12} className={classes.updateItem}>
         <p className={style.durationText}>{getDuration(time)}</p>
         <Typography color="primary" component="p" variant="h6">
            <EmojiEventsIcon color="error"/> {heading}

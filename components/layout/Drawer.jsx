@@ -19,18 +19,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import HeaderControls from "./HeaderControls";
-const drawerWidth = 240;
 
+const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    // backgroundImage:"url(https://res.cloudinary.com/dun9j2psp/image/upload/v1618456782/the-stack-master/home/watercolor-4629342_640_uqu5cb.png)",
-    // backgroundRepeat:"no-repeat",
-    height:'100vh'
-  },
-  appbarInfo:{
-    position:"absolute",
-    right:10
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
@@ -38,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    backgroundColor:"#fff"
   },
   appBarShift: {
     marginLeft: drawerWidth,
@@ -49,10 +41,8 @@ const useStyles = makeStyles((theme) => ({
     }),
   },
   menuButton: {
-    marginRight: 36,
-    '& .MuiSvgIcon-root':{
-      fill:"black"
-    }
+    marginRight: 20,
+    padding:"0px"
   },
   hide: {
     display: 'none',
@@ -61,13 +51,27 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
     flexShrink: 0,
     whiteSpace: 'nowrap',
+    "& .MuiDrawer-paperAnchorDockedLeft":{
+          borderRight:"0px solid rgba(0, 0, 0, 0.12)"
+     },
+    [theme.breakpoints.up('sm')]:{
+      "& .MuiDrawer-paperAnchorDockedLeft":{
+          borderRight:"1px solid rgba(0, 0, 0, 0.12)"
+      }
+    },
+    '& .jss12':{
+      padding:"0px"
+    }
   },
   drawerOpen: {
-    width: drawerWidth,
+    width:drawerWidth,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
+    "& .MuiDrawer-paperAnchorDockedLeft":{
+          borderRight:"1px solid rgba(0, 0, 0, 0.12)"
+    }
   },
   drawerClose: {
     transition: theme.transitions.create('width', {
@@ -75,10 +79,25 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     overflowX: 'hidden',
-    width: theme.spacing(7) + 1,
+    width:0,
     [theme.breakpoints.up('sm')]: {
-      width: theme.spacing(9) + 1,
+      width: theme.spacing(7) + 1,
     },
+  },
+  chevronIconContainer:{
+    position:"fixed",
+    top:0,
+    left:`${drawerWidth-70}px`,
+    zIndex:theme.zIndex.drawer + 1,
+    backgroundColor:"white",
+    borderLeft:"8px solid #3f51b5",
+    borderBottomLeftRadius:"50%"
+  },
+  menuList:{
+    marginTop:"37px",
+    [theme.breakpoints.up('sm')]:{
+      marginTop:"54px"
+    }
   },
   toolbar: {
     display: 'flex',
@@ -90,10 +109,20 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
+    padding: theme.spacing(4),
   },
-  mainText:{
-    color:"black"
+  layersIcon:{
+      color:"white"
+  },
+  bdevgIconButton:{
+    padding:"0px"
+  },
+  whiteColor:{
+    color:"white"
+  },
+  userAvatar:{
+    position:"absolute",
+    right:0,
   }
 }));
 
@@ -153,7 +182,7 @@ export default function DrawerComponent({children}) {
           }),
         }}
       >
-        <div className={classes.toolbar}>
+        <div className={`${classes.toolbar} ${classes.chevronIconContainer}`}>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
@@ -178,8 +207,8 @@ export default function DrawerComponent({children}) {
         </List>
       </Drawer>
       <main className={classes.content}>
-        <div className={classes.toolbar} />
-        {children}
+            <div className={classes.toolbar} />
+              {children}
       </main>
     </div>
   );
