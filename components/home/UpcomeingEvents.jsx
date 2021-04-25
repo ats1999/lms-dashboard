@@ -45,7 +45,7 @@ const data = [
     }
 ]
 export default function UpcomeingEvent(){
-    return <>
+    return <div className={style.upcomeingEventContainer}>
         <Typography
             color="textPrimary"
             variant="h4"
@@ -53,10 +53,10 @@ export default function UpcomeingEvent(){
         >
             Upcomeing Events
         </Typography>
-        <div className={style.upcomeingEventContainer}>
+        <div className={style.upcomeingEventS}>
             {[...data,...data,...data].map((event,idx)=>{
                 return <Event {...event} key={idx}/>
             })}
         </div>
-    </>
+    </div>
 }

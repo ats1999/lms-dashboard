@@ -17,8 +17,14 @@
     margin-right: 10px;
     display: inline;
     border-radius: 10px;
+    width: 300px;
+}
+.upcomeingEventS{
+    display: flex;
+    margin-top: 20px;
+    overflow: auto;
+    width: 100%;    
 }
 .upcomeingEventContainer{
-    display: flex;
-    overflow: auto;
+    margin-top: 50px;
 }

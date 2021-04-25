@@ -37,7 +37,7 @@ export default function Index(){
                 eventDateTime={Date.now()+1500000}
             />
 
-            <UpcomeingEvents/>
+            {/*<UpcomeingEvents/>*/}
         </Grid>
         <Grid item sm={12} md={4} className={classes.performanceContainer}>
             <Performance
