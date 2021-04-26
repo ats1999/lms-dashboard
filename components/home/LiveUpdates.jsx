@@ -25,7 +25,9 @@ function getDuration(time){
         return `${sec} sec ago`;
     else if(sec<(60*60))
         return `${parseInt(sec/60)} min ago`;
-    else return `${parseInt(sec/(60*60))} hr ago`;     
+    else if(sec<(60*60*24)) 
+        return`${parseInt(sec/(60*60))} hr ago`;     
+    else return `${parseInt((sec/(60*60))/24)} days ago`;
 }
 
 function Update({heading,info,time}){

@@ -45,7 +45,7 @@ const data = [
     }
 ]
 export default function UpcomeingEvent(){
-    return <div className={style.upcomeingEventContainer}>
+    return <div className={style.upcomeingEventsContainer}>
         <Typography
             color="textPrimary"
             variant="h4"

@@ -11,20 +11,21 @@
     color: #da0909e3;
 }
 .eventContainer{
-    padding: 10px;
+    /* padding: 10px;
     background-color: #f6faff;
     margin-left: 10px;
     margin-right: 10px;
-    display: inline;
-    border-radius: 10px;
-    width: 300px;
+    border-radius: 10px; */
+    width: 400px;
+    flex-shrink: 0;
+    /* min-width: 300px; */
 }
 .upcomeingEventS{
     display: flex;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     overflow: auto;
-    width: 100%;    
+    /* width: 100%; */
 }
-.upcomeingEventContainer{
+.upcomeingEventsContainer{
     margin-top: 50px;
 }

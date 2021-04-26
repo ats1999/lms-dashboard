@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme)=>({
     },
     viewEventButton:{
         backgroundColor:"#e23f5b",
-        padding:"15px",
+        padding:"7px",
         paddingLeft:"50px",
         paddingRight:"50px",
         borderRadius:"10px",
@@ -25,6 +25,15 @@ const useStyles = makeStyles((theme)=>({
             padding:"10px",
             paddingLeft:"25px",
             paddingRight:"25px"
+        }
+    },
+    timerContainer:{
+        display:"flex"
+    },
+    dateTimeContainer:{
+        display:"flex",
+        '& p':{
+            marginLeft:"5px"
         }
     }
 }))
@@ -53,7 +62,7 @@ function Event({name,type,date,time,eventDateTime}){
     return <Grid container spacing={2} className={classes.container}>
         <Grid item sm={5} xs={12}>
             <img 
-                src="https://res.cloudinary.com/dun9j2psp/image/upload/v1619212030/lsm/home/undraw_teaching_f1cm_e6zruf.svg"
+                src="https://res.cloudinary.com/dun9j2psp/image/upload/v1619437232/lsm/home/undraw_developer_activity_bv83_iwbly6.svg"
                 alt={name}
                 className={style.eventImage}
             />
@@ -66,34 +75,22 @@ function Event({name,type,date,time,eventDateTime}){
             </Grid>
 
             {/* time and date */}
-            <Grid item xs={12}>
-                <Grid container spacing={1}>
-                    <Grid item xs={4}>
-                        <EventIcon size="small" color="primary" />&nbsp;{date}
-                    </Grid>
-                    <Grid item xs={8}>
-                        <ScheduleIcon/>&nbsp;{time}
-                    </Grid>
-                </Grid>
+            <Grid item xs={12} className={classes.dateTimeContainer}>
+                <p><EventIcon size="small" color="primary" />&nbsp;{date}</p>
+                <p><ScheduleIcon color="error" />&nbsp;{time}</p>
             </Grid>
 
             {/* view event button and count down timer */}
-            <Grid item xs={12}>
-                <Grid container spacing={1}>
-                    <Grid item xs={7}>
-                        <Button
-                            className={classes.viewEventButton}
-                        >
-                            View Event
-                        </Button>
-                    </Grid>
-                    <Grid item xs={5}>
-                        <div className={style.countDownTimer}>
-                            <p>Starts In</p>
-                            <Countdown date={eventDateTime}/>
-                        </div>
-                    </Grid>
-                </Grid>    
+            <Grid item xs={12} className={classes.timerContainer}>
+                <Button
+                    className={classes.viewEventButton}
+                >
+                    View Event
+                </Button>
+                <div className={style.countDownTimer}>
+                    <p>Starts In</p>
+                    <Countdown date={eventDateTime}/>
+                </div> 
             </Grid>
         </Grid>
     </Grid>

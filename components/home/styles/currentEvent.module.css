@@ -13,13 +13,16 @@
     font-weight: bold;
     font-size: 20px;
 }
+.countDownTimer{
+    margin-left: 5px;
+}
 .countDownTimer > p{
     font-weight: bold;
     color: gray;
     margin: 1px;
     font-size: 10px;
 }
-.countDownTimer > span{
+.countDownTimer  span{
     font-weight: bold;
     color: black;
     font-weight: bold;
