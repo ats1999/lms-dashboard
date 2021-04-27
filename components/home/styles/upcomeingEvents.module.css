@@ -13,11 +13,8 @@
 .eventContainer{
     padding: 10px;
     background-color: #f6faff;
-    margin-left: 10px;
-    margin-right: 10px;
     border-radius: 10px;
-    flex-shrink: 0;
-    flex-basis: 300px;
+    flex-basis: 250px;
 }
 .upcomeingEventS{
     display: flex;
@@ -25,4 +22,5 @@
 }
 .upcomeingEventsContainer{
     margin-top: 50px;
+    position: relative;
 }

@@ -2,7 +2,9 @@ import EventType from "@const/home/upcomeingEvents.json";
 import SupervisedUserCircleOutlinedIcon from '@material-ui/icons/SupervisedUserCircleOutlined';
 import NaturePeopleOutlinedIcon from '@material-ui/icons/NaturePeopleOutlined';
 import style from "./styles/upcomeingEvents.module.css";
+import commonStyle from "./styles/style.module.css";
 import Typography from "@material-ui/core/Typography";
+import ScrollButtons from "@components/util/onclick-scroll-buttons/ScrollButtons";
 
 function Event({type,eventName,date,time}){
     let typeName,icon;
@@ -17,7 +19,7 @@ function Event({type,eventName,date,time}){
             break;
     }
 
-    return <div className={style.eventContainer}>
+    return <div className={`${commonStyle.flexItemsScrollableHorizontal} ${style.eventContainer}`}>
         <p className={style.eventType}>{icon} {typeName}</p>
         <p className={style.eventName}>{eventName}</p>
         <p className={style.dateTimeText}>{date} | {time}</p>
@@ -46,6 +48,7 @@ const data = [
 ]
 export default function UpcomeingEvent(){
     return <div className={style.upcomeingEventsContainer}>
+        <ScrollButtons containerId="container"/>
         <Typography
             color="textPrimary"
             variant="h4"
@@ -53,7 +56,7 @@ export default function UpcomeingEvent(){
         >
             Upcomeing Events
         </Typography>
-        <div className={style.upcomeingEventS}>
+        <div id="container" className={commonStyle.flexContainer}>
             {[...data,...data,...data].map((event,idx)=>{
                 return <Event {...event} key={idx}/>
             })}
