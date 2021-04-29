@@ -6,6 +6,27 @@ import commonStyle from "./styles/style.module.css";
 import Typography from "@material-ui/core/Typography";
 import ScrollButtons from "@components/util/onclick-scroll-buttons/ScrollButtons";
 
+const data = [
+    {
+    type:EventType.LIVE_CLASS,
+    eventName:"Lab Session",
+    date:"24 Apr, Saturday",
+    time:"08:00 PM"
+},
+{
+    type:EventType.MENTOR_SESSION,
+    eventName:"Mentor Session",
+    date:"28 Apr, Saturday",
+    time:"08:00 PM"
+},
+{
+    type:EventType.LIVE_CLASS,
+    eventName:"Lab Session",
+    date:"24 Apr, Saturday",
+    time:"08:00 PM"
+}
+]
+
 function Event({type,eventName,date,time}){
     let typeName,icon;
     switch(type){
@@ -19,33 +40,13 @@ function Event({type,eventName,date,time}){
             break;
     }
 
-    return <div className={`${commonStyle.flexItemsScrollableHorizontal} ${style.eventContainer}`}>
+    return <div className={`flexItemsScrollableHorizontal ${commonStyle.containerItemPddingMargin} ${style.eventContainer}`}>
         <p className={style.eventType}>{icon} {typeName}</p>
         <p className={style.eventName}>{eventName}</p>
         <p className={style.dateTimeText}>{date} | {time}</p>
     </div>
 }
 
-const data = [
-        {
-        type:EventType.LIVE_CLASS,
-        eventName:"Lab Session",
-        date:"24 Apr, Saturday",
-        time:"08:00 PM"
-    },
-    {
-        type:EventType.MENTOR_SESSION,
-        eventName:"Mentor Session",
-        date:"28 Apr, Saturday",
-        time:"08:00 PM"
-    },
-    {
-        type:EventType.LIVE_CLASS,
-        eventName:"Lab Session",
-        date:"24 Apr, Saturday",
-        time:"08:00 PM"
-    }
-]
 export default function UpcomeingEvent(){
     return <div className={style.upcomeingEventsContainer}>
         <ScrollButtons containerId="container"/>
@@ -56,7 +57,7 @@ export default function UpcomeingEvent(){
         >
             Upcomeing Events
         </Typography>
-        <div id="container" className={commonStyle.flexContainer}>
+        <div id="container" className={`flexContainer`}>
             {[...data,...data,...data].map((event,idx)=>{
                 return <Event {...event} key={idx}/>
             })}

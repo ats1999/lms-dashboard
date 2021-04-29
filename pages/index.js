@@ -4,6 +4,7 @@ import CurrentEvent from "@components/home/CurrentEvent";
 import Performance from "@components/home/Performance";
 import LiveUpdates from "@components/home/LiveUpdates";
 import UpcomeingEvents from "@components/home/UpcomeingEvents";
+import PendingActions from "@components/home/PendingActions";
 
 import {makeStyles} from "@material-ui/core";
 
@@ -38,6 +39,8 @@ export default function Index(){
             />
 
             <UpcomeingEvents/>
+
+            <PendingActions/>
         </Grid>
         <Grid item sm={12} md={4} className={classes.performanceContainer}>
             <Performance

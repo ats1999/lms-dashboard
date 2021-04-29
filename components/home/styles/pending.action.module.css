@@ -1,0 +1,33 @@
+.pendingActionContainer{
+    margin-top: 50px;
+}
+
+.title{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: darkgoldenrod
+}
+
+.subTitle{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    color: darkgreen;
+}
+.description{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.url{
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+}
+.item{
+    background-color: #f5f5f5;
+    border-left: 2px solid green;
+}

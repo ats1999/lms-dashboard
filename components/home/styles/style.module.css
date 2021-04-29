@@ -1,11 +1,4 @@
-.flexContainer{
-    display: flex;
-    overflow: auto;
-    position: relative;
-}
-
-.flexItemsScrollableHorizontal{
-    flex-shrink: 0;
-    margin-left: 10px;
-    margin-right: 10px;
+.containerItemPddingMargin{
+    margin: 5px;
+    padding: 5px;
 }

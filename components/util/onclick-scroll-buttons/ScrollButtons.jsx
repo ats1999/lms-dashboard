@@ -11,13 +11,16 @@ const useStyles = makeStyles((theme)=>({
     buttons:{
         position:'absolute',
         top:"100px",
-        zIndex:10000
+        zIndex:1
     },
     left:{
         left:"10px"
     },
     right:{
         right:"10px"
+    },
+    '& .MuiFab-sizeSmall':{
+        width:"25px"
     }
 }))
 
