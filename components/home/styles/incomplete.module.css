@@ -1,0 +1,21 @@
+.incompleteEvents{
+    margin-top: 50px;
+    position: relative;
+}
+.item{
+    cursor: pointer;
+    height: 150px;
+    flex-basis: 300px;
+    opacity: 0.8;
+    position: relative;
+}
+
+.title{
+    opacity: 1;
+    font-size: 20px;
+    font-weight: bold;
+}
+.date{
+    font-size: 15px;
+    font-weight: bold;
+}

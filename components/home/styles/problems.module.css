@@ -1,0 +1,60 @@
+.problems{
+    margin-top: 50px;
+    position: relative;
+}
+.allUrl{
+    text-decoration: none;
+    font-size: 15px;
+}
+.itemInfo{
+    /* for next/link */
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+.item{
+    flex-basis: 250px;
+    height: 100px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+    position: relative;
+}
+.title{
+    font-size: 15px;
+    font-weight: bold;
+    margin:0;
+    padding: 0;
+}
+.statusScore span{
+    margin: 5px;
+    font-size: 12px;
+}
+.statusText{
+    font-size: 12px;
+    padding: 2px;
+    border-radius: 5px;
+    height: 18px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.score{
+    position: absolute;
+    right:10px;
+    bottom: 10px;
+}
+
+/* status color */
+.attempted{
+    background-color: lightsalmon;
+    color: black;
+}
+.notAttempted{
+    background-color: darkred;
+    color: white;
+}
+.answered{
+    background-color: lightgreen;
+    color: black;
+}
+

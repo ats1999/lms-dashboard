@@ -1,6 +1,5 @@
 import React from 'react';
 import Typography  from "@material-ui/core/Typography";
-import ScrollButtons from "@components/util/onclick-scroll-buttons/ScrollButtons";
 import Link from "next/link";
 import ACTIONS from "@const/home/actions.json";
 import style from "./styles/pending.action.module.css";
@@ -52,7 +51,6 @@ function Action({title,subTitle,url,type,description}){
 function PendingActions() {
     return (
         <div className={style.pendingActionContainer}>
-            <ScrollButtons containerId="action__container"/>
             <Typography
                 color="textPrimary"
                 variant="h4"
@@ -61,7 +59,7 @@ function PendingActions() {
                 Pending Actions on you
             </Typography>
         <div id="action__container" className={`flexContainer`}>
-            {[...data,...data,...data].map((action,idx)=>{
+            {data.map((action,idx)=>{
                 return <Action {...action} key={idx}/>
             })}
         </div>
