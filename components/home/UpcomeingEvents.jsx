@@ -39,8 +39,7 @@ function Event({type,eventName,date,time}){
             icon = <NaturePeopleOutlinedIcon color="error"/>
             break;
     }
-
-    return <div className={`flexItemsScrollableHorizontal ${commonStyle.containerItemPddingMargin} ${style.eventContainer}`}>
+    return <div className={`flexItemsScrollableHorizontal ${style.eventContainer}`}>
         <p className={style.eventType}>{icon} {typeName}</p>
         <p className={style.eventName}>{eventName}</p>
         <p className={style.dateTimeText}>{date} | {time}</p>

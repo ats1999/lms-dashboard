@@ -59,7 +59,7 @@ function DefaultEvent(){
 
 function Event({name,type,date,time,eventDateTime}){
     const classes = useStyles();
-    return <Grid container spacing={2} className={classes.container}>
+    return <Grid container spacing={0} className={classes.container}>
         <Grid item sm={5} xs={12}>
             <img 
                 src="https://res.cloudinary.com/dun9j2psp/image/upload/v1619437232/lsm/home/undraw_developer_activity_bv83_iwbly6.svg"

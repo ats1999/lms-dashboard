@@ -1,26 +1,14 @@
-.mx-auto {
-	margin-left: auto;
-	margin-right: auto;
+body{
+	width: 100%;
+	height: 100%;
 }
-
-.w-50 {
-	width: 50%;
-}
-
-.w-25 {
-	width: 25%;
-}
-
-.d-block {
-	display: block;
-}
-
 .flexContainer {
 	display: flex;
 	overflow: auto;
 	position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
+	width: 100%;
 }
 
 .flexItemsScrollableHorizontal {
@@ -28,7 +16,12 @@
 	margin: 5px;
 	padding: 5px;
 }
-
+.flexItemsScrollableHorizontal:first-child{
+	margin-left: 0 !important;
+}
+.flexItemsScrollableHorizontal:last-child{
+	margin-right: 0 !important;
+}
 
 /* width */
 

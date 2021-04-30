@@ -110,6 +110,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(4),
+    width:"100%"
   },
   layersIcon:{
       color:"white"
@@ -208,7 +209,7 @@ export default function DrawerComponent({children}) {
       </Drawer>
       <main className={classes.content}>
             <div className={classes.toolbar} />
-              {children}
+            {children}
       </main>
     </div>
   );

@@ -15,12 +15,15 @@ const useStyles = makeStyles((theme)=>({
         backgroundColor:"#dbecfd",
         padding:"20px",
         borderRadius:"10px"
+    },
+    root:{
+        width:"100%"
     }
 }))
 
 export default function Index(){
     const classes = useStyles();
-    return <Grid container spacing={4}>
+    return <Grid container spacing={0} className={classes.root}>
         <Grid item xs={12}>
             <Typography 
                 variant="h3"
@@ -39,11 +42,10 @@ export default function Index(){
                 time="08:00 PM"
                 eventDateTime={Date.now()+1500000}
             />
-
             <UpcomeingEvents/>
-            <PendingActions/>
+            {/* <PendingActions/>
             <ContinueInCompleteEvents/>
-            <Problems/>
+            <Problems/> */}
         </Grid>
         <Grid item sm={12} md={4} className={classes.performanceContainer}>
             <Performance
