@@ -1,6 +1,6 @@
 import Grid from "@material-ui/core/Grid";
 import {
-    Typography, Box
+    Typography
 } from "@material-ui/core";
 import CurrentEvent from "@components/home/CurrentEvent";
 import Performance from "@components/home/Performance";
