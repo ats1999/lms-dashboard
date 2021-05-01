@@ -101,7 +101,10 @@ function Problems() {
                     onChange={(_,newVal)=>{
                         setTab(newVal)
                     }}
-                    aria-label="Problems tabs">
+                    aria-label="Problems tabs"
+                    scrollButtons="on"
+                    variant="scrollable"
+                >
                     <Tab label="Recently attempted" value="0"/>
                     <Tab label="Bookmarked" value="1"/>
                     <Tab label="Recently Added" value="2"/>
