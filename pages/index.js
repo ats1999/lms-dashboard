@@ -9,6 +9,8 @@ import UpcomeingEvents from "@components/home/UpcomeingEvents";
 import PendingActions from "@components/home/PendingActions";
 import ContinueInCompleteEvents from "@components/home/ContinueInCompleteEvents";
 import Problems from "@components/home/Problems";
+import PastEvents from "@components//home/PastEvents";
+import TSMEvents from "@components/home/TSMEvents";
 
 import {makeStyles} from "@material-ui/core";
 
@@ -52,6 +54,8 @@ export default function Index(){
             <PendingActions/>
             <ContinueInCompleteEvents/>
             <Problems/>
+            <PastEvents/>
+            <TSMEvents/>
         </Grid>
         <Grid item sm={12} md={4} className={`${classes.performanceContainer}`}>
             <Performance
