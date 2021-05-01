@@ -1,5 +1,7 @@
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
+import {
+    Typography, Box
+} from "@material-ui/core";
 import CurrentEvent from "@components/home/CurrentEvent";
 import Performance from "@components/home/Performance";
 import LiveUpdates from "@components/home/LiveUpdates";
@@ -18,12 +20,16 @@ const useStyles = makeStyles((theme)=>({
     },
     root:{
         width:"100%"
+    },
+    eventsGrid:{
+        padding:"10px",
+        width:"100%"
     }
 }))
 
 export default function Index(){
     const classes = useStyles();
-    return <Grid container spacing={0} className={classes.root}>
+    return <Grid container className={classes.root}>
         <Grid item xs={12}>
             <Typography 
                 variant="h3"
@@ -34,7 +40,7 @@ export default function Index(){
                 LMS Dashboard
             </Typography>
         </Grid>
-        <Grid item sm={12} md={8}>
+        <Grid item sm={12} md={8} className={classes.eventsGrid}>
             <CurrentEvent
                 name="Live class"
                 type="Lab Session"
@@ -43,11 +49,11 @@ export default function Index(){
                 eventDateTime={Date.now()+1500000}
             />
             <UpcomeingEvents/>
-            {/* <PendingActions/>
+            <PendingActions/>
             <ContinueInCompleteEvents/>
-            <Problems/> */}
+            <Problems/>
         </Grid>
-        <Grid item sm={12} md={4} className={classes.performanceContainer}>
+        <Grid item sm={12} md={4} className={`${classes.performanceContainer}`}>
             <Performance
                 Attendance={70}
                 psPercent={25}
