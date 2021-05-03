@@ -1,0 +1,18 @@
+.welcomeText{
+    font-weight:700;
+}
+.welcomeGreet{
+    color: gray;
+}
+.joinContainer{
+    padding: 10px;
+    margin-top: 50px;
+}
+.joinContainer > a{
+    text-decoration: none;
+    background-color: #0076ff;
+    padding: 5px 10px 5px 10px;
+    font-size: 15px;
+    color: white;
+    border-radius: 4px;
+}
