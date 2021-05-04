@@ -29,6 +29,10 @@ const useStyles = makeStyles((theme)=>({
     accordion:{
         '& .MuiAccordionDetails-root':{
             display:"block"
+        },
+        background:"lightblue",
+        '& .MuiAccordionSummary-root.Mui-expanded':{
+            background:"bisque"
         }
     },timeline:{
         '& .MuiTimelineItem-missingOppositeContent:before':{
