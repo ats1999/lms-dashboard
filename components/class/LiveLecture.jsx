@@ -108,6 +108,10 @@ export default function LiveLecture(){
                                 <a href="#joining" target="_blank">
                                     Watch Recorded Session
                                 </a>
+
+                                <a href="#downloading..." target="_blank">
+                                    Download Lecture Notes
+                                </a>
                             </div>
                         </AccordionDetails>
                     </Accordion>

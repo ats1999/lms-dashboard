@@ -6,8 +6,14 @@
 }
 .joinContainer{
     padding: 10px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
+
+.joinContainer{
+    display: flex;
+    flex-direction: row;
+}
+
 .joinContainer > a{
     text-decoration: none;
     background-color: #0076ff;
@@ -15,4 +21,19 @@
     font-size: 15px;
     color: white;
     border-radius: 4px;
+}
+
+.joinContainer > a:last-child{
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+    /* change direction of links so they link text would't wrap */
+    .joinContainer{
+        flex-direction: column;
+    }
+    .joinContainer > a:last-child{
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }

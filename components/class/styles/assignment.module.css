@@ -1,0 +1,19 @@
+.helpRequestButton{
+    background-color: rgb(28 58 148);
+    color: white;
+    padding: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+    transition: all 0.3s ease 0s;
+}
+.helpRequestButton:hover{
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
