@@ -14,6 +14,9 @@ import { useRouter } from 'next/router';
 const useStyles = makeStyles((theme)=>({
     tabs:{
         backgroundColor:"lightblue"
+    },
+    tabpane:{
+        padding:"0px"
     }
 }))
 export default function ClassTabs({}){
@@ -42,13 +45,13 @@ export default function ClassTabs({}){
             <Tab label="Assignment" value={TABS.ASSIGNMENT} />
             <Tab label="Home work" value={TABS.HOME_WORK} />
         </TabList>
-        <TabPanel value={TABS.LIVE_LECTURE} >
+        <TabPanel value={TABS.LIVE_LECTURE} className={classes.tabpane} >
             <LiveLecture/>
         </TabPanel>
-        <TabPanel value={TABS.ASSIGNMENT} >
+        <TabPanel value={TABS.ASSIGNMENT} className={classes.tabpane} >
             <Assignment/>
         </TabPanel>
-        <TabPanel value={TABS.HOME_WORK} >
+        <TabPanel value={TABS.HOME_WORK} className={classes.tabpane} >
             <HomeWork/>
         </TabPanel>
   </TabContext>

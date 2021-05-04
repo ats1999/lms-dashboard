@@ -30,6 +30,18 @@ const useStyles = makeStyles((theme)=>({
         '& .MuiAccordionDetails-root':{
             display:"block"
         }
+    },timeline:{
+        '& .MuiTimelineItem-missingOppositeContent:before':{
+            flex:"0",
+            padding:0,
+            backgroundColor:"red"
+        },
+        '& .MuiTimelineContent-root':{
+            padding:"10px 5px 10px 5px"
+        },
+        [theme.breakpoints.down('xs')]:{
+            padding:"6px 0px"
+        }
     }
 }))
 export default function LiveLecture(){
@@ -41,7 +53,7 @@ export default function LiveLecture(){
         setAccordionPanel(accordionPanel===panel?null:panel);
     }
     return <div>
-        <Timeline align="left">
+        <Timeline align="left" className={classes.timeline}>
             <TimelineItem>
                 <TimelineSeparator>
                 <TimelineDot>
