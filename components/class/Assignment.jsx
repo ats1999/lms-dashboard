@@ -18,6 +18,9 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import FormatListNumberedIcon from '@material-ui/icons/FormatListNumbered';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
+
+// custom
+import QuestionTabs from "./QuestionTabs";
 // style
 import style from "./styles/live.module.css";
 import assignmentStyle from "./styles/assignment.module.css";
@@ -28,10 +31,12 @@ const useStyles = makeStyles((theme)=>({
         display:"block"
     },
     accordion:{
+        width:"100%",
         '& .MuiAccordionDetails-root':{
-            display:"block"
+            display:"block",
+            padding:"5px"
         },
-        background:"lightblue",
+        background:"#f0f2f5",
         '& .MuiAccordionSummary-root.Mui-expanded':{
             background:"bisque"
         }
@@ -49,6 +54,24 @@ const useStyles = makeStyles((theme)=>({
         }
     }
 }))
+
+const data = [
+    {
+        name:"Smallest Multiple With 0 and 1",
+        status:"200",
+        _id:"123123"
+    },
+    {
+        name:"Reversing Elements Of Queue",
+        status:"313",
+        _id:"1237823"
+    },
+    {
+        name:"Smallest Multiple With 0 and 1",
+        status:"301",
+        _id:"112123"
+    }
+]
 export default function Assignment(){
     const classes = useStyles();
     const [accordionPanel, setAccordionPanel] = React.useState("lecture");
@@ -102,15 +125,23 @@ export default function Assignment(){
                                 Assignment Instructions!
                             </Typography>
 
-                            <Typography >
-                                All submissions are automatically checked for plagiarism, and flagged solutions might not be counted towards the total score.
-                                <br/>
-                                Do not hesitate to discuss the solution with your batchmates, or take help from your TAs to build intuition.
-                                <br/>
-                                DO NOT move on from a problem until you have understood the approach very well.
-                                <br/>
-                                Plagiarism would defeat the purpose of learning a new pattern and concept.
-                            </Typography>
+                            <div>
+                                <ul>
+                                    <li>
+                                        All submissions are automatically checked for plagiarism, and flagged solutions might not be counted towards the total score.
+                                    </li>
+
+                                    <li>
+                                        Do not hesitate to discuss the solution with your batchmates, or take help from your TAs to build intuition.
+                                    </li>
+                                    <li>
+                                         DO NOT move on from a problem until you have understood the approach very well.
+                                    </li>
+                                    <li>
+                                        Plagiarism would defeat the purpose of learning a new pattern and concept.
+                                    </li>
+                                </ul>
+                            </div>
                         </AccordionDetails>
                     </Accordion>
                 </TimelineContent>
@@ -138,7 +169,7 @@ export default function Assignment(){
                         </AccordionSummary>
 
                         <AccordionDetails>
-                            <h1>Creating...</h1>
+                            <QuestionTabs questions={data}/>
                         </AccordionDetails>
                     </Accordion>
                 </TimelineContent>

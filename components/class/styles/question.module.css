@@ -1,0 +1,52 @@
+/* question difficulty level
+    0 - very easy\
+    1 - easy
+    2 - medium
+    3 - haard
+    4 - very hard
+*/
+.difficulty{
+    font-weight: bold;
+}
+/* very easy */
+.difficulty_0{
+    background-color: green;
+}
+
+/* easy */
+.difficulty_1{
+    background-color: rgba(0, 128, 0, 0.514);
+}
+
+/* medium */
+.difficulty_2{
+    background-color: yellow;
+}
+
+/* hard */
+.difficulty_3{
+    background-color:darkred;
+}
+
+/* very hard */
+.difficulty_4{
+    background-color: red;
+}
+
+/* question status
+    0- not attempted
+    1 - attempted
+    2 - partially solved
+    3 - solved
+*/
+
+.status{
+}
+.status_0{
+}
+.status_1{
+}
+.status_2{
+}
+.status_3{
+}   

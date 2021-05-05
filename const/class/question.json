@@ -1,0 +1,19 @@
+{
+    "DIFFICULTY":{
+        "0":"Very Easy",
+        "1":"Easy",
+        "2":"Medium",
+        "3":"Hard",
+        "4":"Very Hard"
+    },
+    "TYPE":{
+        "0":"</> Code",
+        "1":"Objective"
+    },
+    "STATUS":{
+        "0":"Not Attempted",
+        "1":"Attempted",
+        "2":"Partially Solved",
+        "3":"Solved"
+    }
+}
