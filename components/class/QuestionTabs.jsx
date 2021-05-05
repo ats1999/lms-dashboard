@@ -1,4 +1,6 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
+import {useRouter} from "next/router";
+
 import Tab from '@material-ui/core/Tab';
 import TabContext from '@material-ui/lab/TabContext';
 import TabList from '@material-ui/lab/TabList';
@@ -14,6 +16,9 @@ import {makeStyles} from "@material-ui/core";
 // const
 import TableHeaders from "@data/class/QuestionTabsTableHeader.json";
 import QUESTION from "@const/class/question.json";
+
+// custom
+import Question from "./Question";
 
 // style
 import style from "./styles/question.module.css";
@@ -81,14 +86,29 @@ function AllQuestions({questions}){
 }
 
 export default function QuestionTabs({questions}){
+    const router = useRouter();
     const classes = useStyles();
     const [tab, setTab] = useState("default");
+
+    useEffect(()=>{
+        if(router.query.qt){
+            // qt - question tab
+            setTab(router.query.qt);
+        }
+    },[]);
+
     if(!questions || questions.length === 0)
         return <p>No Questions assigned!</p>
 
     return <TabContext value={tab}>
         <TabList
-            onChange={(_,val)=>setTab(val)}
+            onChange={(_,val)=>{
+                const {tab,panel} = router.query;
+                setTab(val);
+                router.push(`/class/room?tab=${tab}&panel=${panel}&qt=${val}`,false,{
+                    scroll :false,shallow:true
+                });
+            }}
             aria-label="questions assignment tabs"
             scrollButtons="on"
             variant="scrollable"
@@ -104,9 +124,7 @@ export default function QuestionTabs({questions}){
         </TabPanel>
         {questions.map(q=>{
             return <TabPanel value={q._id} className={classes.tabpane}>
-                <h4>
-                    {q.name}
-                </h4>
+                <Question md={q.md}/>
             </TabPanel>
         })}
     </TabContext>

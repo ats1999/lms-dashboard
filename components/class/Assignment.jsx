@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useEffect} from "react";
+import {useRouter} from "next/router";
 
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
@@ -32,11 +33,11 @@ const useStyles = makeStyles((theme)=>({
     },
     accordion:{
         width:"100%",
+        background:"rgb(0 0 0 / 4%)",
         '& .MuiAccordionDetails-root':{
             display:"block",
             padding:"5px"
         },
-        background:"#f0f2f5",
         '& .MuiAccordionSummary-root.Mui-expanded':{
             background:"bisque"
         }
@@ -44,7 +45,6 @@ const useStyles = makeStyles((theme)=>({
         '& .MuiTimelineItem-missingOppositeContent:before':{
             flex:"0",
             padding:0,
-            backgroundColor:"red"
         },
         '& .MuiTimelineContent-root':{
             padding:"10px 5px 10px 5px"
@@ -55,30 +55,90 @@ const useStyles = makeStyles((theme)=>({
     }
 }))
 
+const md = `
+### Problem Description
+Given a array A of non negative integers, arrange them such that they form the largest number.
+
+Note: The result may be very large, so you need to return a string instead of an integer.
+
+### Problem Constraints
+\`\`\`js
+1 <= len(A) <= 100000
+0 <= A[i] <= 2*109
+\`\`\`
+### Input Format
+\`\`\`js
+First argument is an array of integers.
+\`\`\`
+### Output Format
+\`\`\`js
+Return a string representing the largest number.
+\`\`\`
+### Example Input
+\`\`\`js
+Input 1:
+A = [3, 30, 34, 5, 9]
+ \`\`\`
+ \`\`\`js
+ Input 2:
+ A = [2, 3, 9, 0]
+ \`\`\`
+ ### Example Output
+ \`\`\`js
+ Output 1:
+ "9534330"
+ \`\`\`
+ ### Output 2:
+ \`\`\`js
+ "9320"
+ \`\`\`
+ ### Example Explanation
+ \`\`\`js
+ Explanation 1:
+
+ A = [3, 30, 34, 5, 9]
+Reorder the numbers to [9, 5, 34, 3, 30] to form the largest number.
+Explanation 2:
+
+Reorder the numbers to [9, 3, 2, 0] to form the largest number 9320. 
+\`\`\`
+`
+
 const data = [
     {
         name:"Smallest Multiple With 0 and 1",
         status:"200",
-        _id:"123123"
+        _id:"123123",
+        md:"# Largest Number\n"+md
     },
     {
         name:"Reversing Elements Of Queue",
         status:"313",
-        _id:"1237823"
+        _id:"1237823",
+        md:"# Max Chunks To Make Sorted\n"+md
     },
     {
         name:"Smallest Multiple With 0 and 1",
         status:"301",
-        _id:"112123"
+        _id:"112123",
+        md:"# Vertical and Horizontal Sums\n"+md
     }
 ]
 export default function Assignment(){
+    const router = useRouter();
     const classes = useStyles();
     const [accordionPanel, setAccordionPanel] = React.useState("lecture");
     
+    useEffect(()=>{
+        if(router.query.panel){
+            // set panel so it would be preserved
+            setAccordionPanel(router.query.panel);
+        }
+    },[]);
+
     const handlePanelChange=(panel)=>{
-        // collapse the current panel
-        setAccordionPanel(accordionPanel===panel?null:panel);
+        router.push(`/class/room?tab=${router.query.tab}&panel=${panel}`);
+        setAccordionPanel(panel===accordionPanel?null:panel);
     }
     return <div>
         <Timeline align="left" className={classes.timeline}>
