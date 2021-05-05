@@ -137,7 +137,7 @@ export default function Assignment(){
     },[]);
 
     const handlePanelChange=(panel)=>{
-        router.push(`/class/room?tab=${router.query.tab}&panel=${panel}&qt=${router.query.qt}`);
+        router.push(`/class/room?tab=${router.query.tab}&panel=${panel}&qt=${router.query.qt || "default"}`);
         setAccordionPanel(panel===accordionPanel?null:panel);
     }
     return <div>

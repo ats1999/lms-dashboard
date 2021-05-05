@@ -91,7 +91,7 @@ export default function QuestionTabs({questions}){
     const [tab, setTab] = useState("default");
 
     useEffect(()=>{
-        if(router.query.qt && router.query.qt != undefined && router.query.qt != "undefined"){
+        if(router.query.qt){
             // qt - question tab
             setTab(router.query.qt);
         }
