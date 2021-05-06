@@ -36,18 +36,24 @@ const useStyles = makeStyles((theme)=>({
         background:"rgb(0 0 0 / 4%)",
         '& .MuiAccordionDetails-root':{
             display:"block",
-            padding:"5px"
+            padding:"5px",
+            width:"100%"
         },
         '& .MuiAccordionSummary-root.Mui-expanded':{
             background:"bisque"
+        },
+        '& .MuiCollapse-wrapper,.MuiCollapse-container,.MuiAccordionSummary-content,.MuiAccordionSummary-root,.MuiAccordion-root':{
+            width:"100%"
         }
     },timeline:{
+        width:"100%",
         '& .MuiTimelineItem-missingOppositeContent:before':{
             flex:"0",
             padding:0,
         },
         '& .MuiTimelineContent-root':{
-            padding:"10px 5px 10px 5px"
+            padding:"10px 5px 10px 5px",
+            width:"100%"
         },
         [theme.breakpoints.down('xs')]:{
             padding:"6px 0px"
@@ -137,7 +143,9 @@ export default function Assignment(){
     },[]);
 
     const handlePanelChange=(panel)=>{
-        router.push(`/class/room?tab=${router.query.tab}&panel=${panel}&qt=${router.query.qt || "default"}`);
+        router.push(`/class/room?tab=${router.query.tab}&panel=${panel}&qt=${router.query.qt || "default"}`,false,{
+            scroll :false,shallow:true
+        });
         setAccordionPanel(panel===accordionPanel?null:panel);
     }
     return <div>

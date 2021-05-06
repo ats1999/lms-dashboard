@@ -33,7 +33,10 @@ export default function ClassTabs({}){
     return <TabContext value={tab}>
         <TabList 
             onChange={(_,val)=>{
-                router.push(`/class/room?tab=${val}`)
+                const {panel,qt} = router.query;
+                router.push(`/class/room?tab=${val}&panel=${panel?panel:"lecture"}&qt=${qt?qt:"default"}`,false,{
+                    scroll :false,shallow:true
+                })
                 //setTab(val)
             }} 
             aria-label="class assignment tabs"
