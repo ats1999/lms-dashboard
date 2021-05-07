@@ -128,6 +128,9 @@ const useStyles = makeStyles((theme) => ({
   userAvatar:{
     position:"absolute",
     right:0,
+  },
+  appbarInfo:{
+    display:"flex",
   }
 }));
 

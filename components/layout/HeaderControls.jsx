@@ -6,7 +6,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(()=>({
     fabButton:{
-        margin:"5px"
+        margin:"5px",
+        flexBasic:"50px"
     }
 }))
 function FabButton({icon}){
