@@ -114,7 +114,7 @@ function WeekDetails({schedule,dayOfClass}){
                         </TableCell>
                         <TableCell>
                             <Link href={day.actionUrl}>
-                                VIEW CLASSROOM
+                                <a style={{textDecoration:"none"}}>VIEW CLASSROOM</a>
                             </Link>
                         </TableCell>
                     </TableRow>
