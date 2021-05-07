@@ -123,10 +123,10 @@ export default function QuestionTabs({questions}){
         <TabPanel value="default" className={classes.tabpane} >
             <AllQuestions questions={questions}/>
         </TabPanel>
-        {/* {questions.map(q=>{
+        {questions.map(q=>{
             return <TabPanel key={q._id} value={q._id} className={classes.tabpane}>
                 <Question md={q.md}/>
             </TabPanel>
-        })} */}
+        })}
     </TabContext>
 }
