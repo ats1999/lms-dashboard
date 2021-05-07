@@ -16,6 +16,7 @@ function FabButton({icon}){
         size="small" 
         color="primary"
         className={classes.fabButton}
+        href="https://github.com/ats1999/lms-dashboard"
     >
         {icon}
     </Fab>
@@ -25,7 +26,7 @@ function HeaderControls(){
     <FabButton icon={<SearchIcon/>}/>
     <FabButton icon={<WhatshotIcon/>}/>
     <FabButton icon={<AccountTreeIcon/>}/>
-    <FabButton icon={<Avatar src="" alt="Rahul kumar" />}/>
+    <FabButton icon={<Avatar src="https://res.cloudinary.com/bdevg/image/upload/v1604287418/pic_xexz8o.jpg" alt="Rahul kumar"/>}/>
     </>
 }
 
