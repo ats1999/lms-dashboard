@@ -56,7 +56,7 @@ function getStaus(status){
 
 function AllQuestions({questions}){
     const classes = useStyles();
-    return null;
+
     return <TableContainer className={classes.table}>
         <Table>
             <TableHead>
