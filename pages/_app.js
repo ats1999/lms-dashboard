@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from "@src/theme";
 import Drawer from "@components/layout/Drawer";
 import "@styles/globals.css";
+import "@styles/toast.css";
 
 export default function MyApp(props) {
   const { Component, pageProps } = props;

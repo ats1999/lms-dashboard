@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme)=>({
     },
     accordion:{
         width:"100%",
-        background:"rgb(0 0 0 / 4%)",
+        background:"white",
         '& .MuiAccordionDetails-root':{
             display:"block",
             padding:"5px",
