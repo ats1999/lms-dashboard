@@ -19,6 +19,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import HeaderControls from "./HeaderControls";
 import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
 import LaptopChromebookIcon from '@material-ui/icons/LaptopChromebook';
+import HelpIcon from '@material-ui/icons/Help';
+import AssistantIcon from '@material-ui/icons/Assistant';
+import EmojiFlagsIcon from '@material-ui/icons/EmojiFlags';
 import Link from "next/link";
 
 const drawerWidth = 240;
@@ -131,6 +134,9 @@ const useStyles = makeStyles((theme) => ({
   },
   appbarInfo:{
     display:"flex",
+  },
+  mainText:{
+    cursor:"pointer"
   }
 }));
 
@@ -168,9 +174,11 @@ export default function DrawerComponent({children}) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" className={classes.mainText}>
-            LMS
-          </Typography>
+          <Link href="/">
+            <Typography variant="h6" className={classes.mainText}>
+              LMS
+            </Typography>
+          </Link>
 
           <div className={classes.appbarInfo}>
             <HeaderControls/>
@@ -205,6 +213,18 @@ export default function DrawerComponent({children}) {
             text:"All Classes",
             url:"/class/all",
             icon:<LaptopChromebookIcon/>
+          },{
+            text:"Help Request",
+            url:"/coming-soon?page=Help Request",
+            icon:<HelpIcon/>
+          },{
+            text:"Teaching Assistent",
+            url:"/coming-soon/?page=Teaching Assistent",
+            icon:<AssistantIcon/>
+          },{
+            text:"Leader Board",
+            url:"/coming-soon?page=Leader Board",
+            icon:<EmojiFlagsIcon/>
           }].map((link) => (
             <Link href={link.url} key={link.text}>
               <ListItem button>
