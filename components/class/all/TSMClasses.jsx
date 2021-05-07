@@ -143,7 +143,7 @@ export default function TSMClasses(){
                 expanded={palenl == idx}
                 onChange={()=>{
                     setPalenl(palenl===idx?null:idx);
-                    router.push(`/class/all?tab=${router.query.tab??"tsm"}&panel=${palenl??0}`,false,{
+                    router.push(`/class/all?tab=${router.query.tab??"tsm"}&panel=${palenl===idx?null:idx}`,false,{
                         scroll :false,shallow:true
                     })
                 }}
